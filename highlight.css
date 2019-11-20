@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.starthidden {
+  display: none;
+}
+
+body {
+  margin: 10px;
+  background-color: #f0f0f0;
+}
+
+.container, .statistics {
+  width: 300px;
+  height: 350px;
+}
+
+.backdrop, textarea {
+  width: 300px;
+  height: 300px;
+}
+
+.highlights, textarea {
+  padding: 10px;
+  font: 20px/28px 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  transform: translateZ(0);
+  -webkit-text-size-adjust: none;
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 1;
+  border: 2px solid #685972;
+  background-color: #fff;
+  overflow: auto;
+  pointer-events: none;
+  transition: transform 1s;
+  border-radius: 8px;
+}
+
+.highlights {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	color: transparent;
+}
+
+textarea {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin: 0 px;
+  border: 2px solid #74637f;
+  border-radius: 0;
+  color: #444;
+  background-color: transparent;
+  overflow: auto;
+  resize: none;
+  transition: transform 1s;
+  border-radius: 8px;
+
+}
+
+unknown {
+  border-radius: 3px;
+  color: transparent;
+  background-color: #FFC107;
+}
+
+commonerror {
+  border-radius: 3px;
+  color: transparent;
+  background-color: #AADDFF;
+}
+
+
+button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 300px;
+  margin: 10px auto 0;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #5658c7;
+  font: 18px 'Opens Sans', sans-serif;
+  letter-spacing: 1px;
+  appearance: none;
+  cursor: pointer;
+}
+
+
+textarea:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1d52a3;
+}

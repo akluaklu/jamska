@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Jamska - Orlsia</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="tables.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+            <div>
+        <ul>
+            <li class="horizontalnav" onclick="showSpellchecker()"><a href="#h">Stavinga</a></li>
+            <li class="horizontalnav" onclick="showStatistics()"><a href="#s">Statistiken</a></li>
+            <li class="horizontalnav" onclick="showTestresults()"><a href="#t">Testresultata</a></li>
+            <li class="horizontalnav" onclick="showAbout()" style="float:right"><a href="#about">Orlsia</a></li>
+        </ul>
+    </div>
+        <div class="spelling">
+            <div>
+                <div class="backdrop">
+                    <div class="highlights"></div>
+                </div>
+                <textarea id="jamska" class="jamska" spellcheck="false">Æsten æsten ôsten Ôsten æ ô Æ Ô k  æ ô klein klein klein klein </textarea>
+            </div>
+            <button>æ</button>
+            <button>ô</button>
+        
+        </div>
+        <div class="statistics starthidden">
+    
+            <table id="statisticsid">
+                <tr>
+                    <th>Month</th>
+                    <th>Savings</th>
+                </tr>
+                <tr>
+                    <td>January</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$50</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unittests starthidden">
+              
+            <textarea id ="unittestresult">Testresultat</textarea>
+                
+        </div>
+            
+        
+
+    </div>
+    <button>TEST</button>
+
+    <script src="markup.js"></script>
+    <script src="textutils.js"></script>
+    <script src="autocorrect.js"></script>
+    <script src="searchUtils.js"></script>
+    <script src="highlight.js"></script>
+    <script src="context-menu.js"></script>
+    <script src="contextmenu.js"></script>
+    <script src="./unittest/alltests.js"></script>
+    <script src="./unittest/textutilstest.js"></script>
+
+
+</body>
+
+</html>
