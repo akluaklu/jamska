@@ -2,6 +2,7 @@
 
    header("Access-Control-Allow-Origin: *");
    header("Content-Type: application/json");
+   
 
    include_once('../config/database.php');
    include_once('../models/wordfrequence.php');
@@ -10,15 +11,21 @@
 
    $database = new Database();
    $conn = $database->connect();
+   $text = "";
 
    $articles = new Articles($conn);
    if (!$articles->isHandled()) {
       $texts = $articles->read();
-      $text = "";
       while ($row = $texts->fetch(PDO::FETCH_ASSOC)) {
          extract($row);
          $text =  $text . ' ' . $body;
       }
+
+      // $response[0] = array();
+     // $response[0]["article"] = $text;
+ 
+ //     echo json_encode($response);
+   
       updateWordFrequence($text); 
       $articles->setAsHandled();
    }
